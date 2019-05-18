@@ -20,6 +20,9 @@ sfdx force:limits:api:display -u DevSandbox
 Create a new SFDX project
 sfdx force:project:create -n geolocation
 
+Create a new SFDX Scratch Org
+sfdx force:org:create -s -f config/project-scratch-def.json -a GeoAppScratch
+
 Disabling secure and persistent browser caching has a significant negative performance impact on Lightning Experience. Always enable the setting in production orgs.
 "orgPreferenceSettings": {
     "s1EncryptedStoragePref2": false
