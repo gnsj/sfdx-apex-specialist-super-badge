@@ -1,0 +1,55 @@
+SFDX Commands
+Login in your DevHub org and set this org as the default devhub
+sfdx force:auth:web:login -d -a DevHub 
+
+Login in others sfdc instances
+sfdx force:auth:web:login -r https://test.salesforce.com -a FullSandbox
+sfdx force:auth:web:login -r https://test.salesforce.com -a DevSandbox
+
+List all orgs set up in your computer
+sfdx force:org:list
+
+Open org in your browser
+sfdx force:org:open -u DevHub
+sfdx force:org:open -u FullSandbox
+sfdx force:org:open -u MyScratchOrg
+
+Check limits in your org/scratch
+sfdx force:limits:api:display -u DevSandbox
+
+Create a new SFDX project
+sfdx force:project:create -n geolocation
+
+Disabling secure and persistent browser caching has a significant negative performance impact on Lightning Experience. Always enable the setting in production orgs.
+"orgPreferenceSettings": {
+    "s1EncryptedStoragePref2": false
+}
+
+Create an Apex Class
+sfdx force:apex:class:create -n WarehouseSyncScheduleTest -d force-app/main/default/classes
+
+Create an Apex Trigger
+sfdx force:apex:trigger:create -n MaintenanceRequest -d force-app/main/default/triggers
+
+Folder examples
+- applications	
+- aura	
+- classes	
+- contentassets	
+- dashboards	
+- flexipages	
+- flows	
+- layouts	
+- objects	
+- pathAssistants	
+- permissionsets	
+- quickActions	
+- remoteSiteSettings	
+- reports	
+- staticresources	
+- tabs	
+- triggers	
+- workflows	
+
+push / synchronize your new code to the scratch org
+sfdx force:source:push
