@@ -52,7 +52,10 @@ Folder examples
 - staticresources	
 - tabs	
 - triggers	
-- workflows	
+- workflows
+
+To retrieve all custom objects and Apex classes
+sfdx force:source:retrieve -m CustomObject,ApexClass
 
 push / synchronize your new code to the scratch org
 sfdx force:source:push
