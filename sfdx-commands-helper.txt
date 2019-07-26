@@ -1,4 +1,7 @@
 SFDX Commands
+Create a new Salesforce DX project
+force:project:create -n MyProject
+
 Login in your DevHub org and set this org as the default devhub
 sfdx force:auth:web:login -d -a DevHub 
 
